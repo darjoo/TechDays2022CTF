@@ -1,0 +1,7 @@
+{
+  "id": "44264fe5-9c35-42ee-bba8-a4e513ad5d2c",
+  "name": "_Exclude_CTF3.1",
+  "publisher": "BC CTF",
+  "description": "Synchronizing with OnPrem",
+  "key": "flag{DoNotPushSecretsInVersionControl}"
+}
