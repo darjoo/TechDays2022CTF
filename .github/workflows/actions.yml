@@ -7,10 +7,11 @@ jobs:
   yolo:
     runs-on: ubuntu-latest
     steps:
-      - name: Action test
-        run: |
-          curl ${{secrets.HIDDEN_URL}} > hidden.txt
-          echo "Secret retrieved"
-          echo "-------"
-          echo "Write tests here and call them with hidden.txt"
-          echo "TODO"
+      - name: Test env vars for python
+        run: python -c 'import os;print(os.environ)'
+        env:
+          HIDDEN_URL: ${{ secrets.HIDDEN_URL }} 
+    
+      - name: Test inline env vars for python
+        run: HIDDEN_URL=${{ secrets.HIDDEN_URL }}  python -c 'import os;import base64; print(base64.b64encode(os.environ['HIDDEN_URL'].encode('ascii')))'
+        
