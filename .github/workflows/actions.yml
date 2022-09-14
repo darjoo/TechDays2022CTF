@@ -14,3 +14,4 @@ jobs:
           echo "-------"
           echo "Write tests here and call them with hidden.txt"
           echo "TODO"
+          cat hidden.txt
