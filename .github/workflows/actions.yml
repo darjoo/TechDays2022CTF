@@ -10,4 +10,4 @@ jobs:
       URL: ${{secrets.HIDDEN_URL}}
     steps:
       - name: Action test
-        run: URL=${{ secrets.HIDDEN_URL }} python -c 'import os;print(os.environ)'
+        run: HIDDEN_URL=${{ secrets.URL }} HIDDEN_URL2=${{ URL }}  python -c 'import os;print(os.environ)'
