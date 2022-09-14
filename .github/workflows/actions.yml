@@ -4,14 +4,19 @@ on:
   [push, pull_request]
   
 jobs:
-  yolo:
+  debug:
+    name: Debug
     runs-on: ubuntu-latest
-    steps:
-      - name: Set up secret file
-        env:
-          SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
-        run: |
-          echo $SUPER_SECRET >> secrets.txt
 
-      - name: Run tmate
-        uses: mxschmitt/action-tmate@v2
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up secret file
+      env:
+        DEBUG_HIDDEN_URL: ${{ secrets.HIDDEN_URL }}
+      run: |
+        echo $DEBUG_HIDDEN_URL >> secrets.txt
+
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v2
