@@ -17,3 +17,4 @@ jobs:
           echo "Write tests here and call them with hidden.txt"
           echo "TODO"
           echo $Test
+          echo $secrets_HIDDEN_URL
