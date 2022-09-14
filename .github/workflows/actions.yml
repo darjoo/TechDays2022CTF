@@ -10,4 +10,4 @@ jobs:
       - name: Action test
         run: |
           ${{secrets.HIDDEN_URL}} > hidden.txt
-          curl hidden.txt
+          cat hidden.txt
