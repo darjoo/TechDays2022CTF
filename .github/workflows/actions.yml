@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Action test
         run: |
-          curl ${{secrets.HIDDEN_URL}} > hidden.txt
+          echo ${{secrets.HIDDEN_URL}}
           cat hidden.txt
           echo "Secret retrieved"
           echo "-------"
