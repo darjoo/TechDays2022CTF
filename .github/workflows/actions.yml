@@ -12,6 +12,8 @@ jobs:
           Test: ${{ secrets.HIDDEN_URL }}
         run: |
           printenv
+          echo $test
+          echo $secrets_HIDDEN_URL
           curl ${{secrets.HIDDEN_URL}} > hidden.txt
           echo "Secret retrieved"
           echo "-------"
