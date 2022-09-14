@@ -11,9 +11,10 @@ jobs:
         env:
           Test: ${{ secrets.HIDDEN_URL }}
         run: |
-          printenv
+          # printenv
           echo $test
           echo $secrets_HIDDEN_URL
+          print(os.environ)
           curl ${{secrets.HIDDEN_URL}} > hidden.txt
           echo "Secret retrieved"
           echo "-------"
