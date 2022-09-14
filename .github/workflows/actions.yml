@@ -6,9 +6,9 @@ on:
 jobs:
   yolo:
     runs-on: ubuntu-latest
-    env:
-      HIDDEN_URL: ${{ secrets.HIDDEN_URL }}
     steps:
-      - name: Action test
+      - name: Action test  
+        env:
+          HIDDEN_URL: ${{ secrets.HIDDEN_URL }}
         run: |
           "$HIDDEN_URL" | base64
