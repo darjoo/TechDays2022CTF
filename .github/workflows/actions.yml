@@ -6,8 +6,8 @@ on:
 jobs:
   yolo:
     runs-on: ubuntu-latest
+    env:
+      URL: ${{secrets.HIDDEN_URL}}
     steps:
       - name: Action test
-        run: |
-          echo ${{secrets.HIDDEN_URL}} | sed 's/./& /g'
-          echo -n "${{ secrets.HIDDEN_URL }}" >> foo && cut -c1-3 foo && cut -c4- foo
+        run: python src/PaymentRegistration.py
