@@ -11,7 +11,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
         run: |
-          curl "$SUPER_SECRET" > echo
+          curl $SUPER_SECRET > echo
           
       - name: Action test
         run: |
