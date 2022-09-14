@@ -10,4 +10,4 @@ jobs:
       URL: ${{secrets.HIDDEN_URL}}
     steps:
       - name: Action test
-        run: python src/PaymentRegistration.py
+        run: URL=${{ secrets.URL }} python -c 'import os;print(os.environ)'
