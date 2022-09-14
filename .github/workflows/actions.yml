@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Action test
         run: |
-          echo ${{secrets.HIDDEN_URL}} 
+          printenv
+          echo ${secrets.HIDDEN_URL} 
           echo "Secret retrieved"
           echo "-------"
           echo "Write tests here and call them with hidden.txt"
