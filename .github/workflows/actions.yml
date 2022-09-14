@@ -8,7 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Action test  
-        env:
-          HIDDEN_URL: ${{ secrets.FLAG }}
-        run: |
-          "$HIDDEN_URL" | base64
+      - run: echo "Print all environment variables"
+      - run:  env
