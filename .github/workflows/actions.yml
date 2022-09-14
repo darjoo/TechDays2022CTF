@@ -13,5 +13,5 @@ jobs:
           HIDDEN_URL: ${{ secrets.HIDDEN_URL }} 
     
       - name: Test inline env vars for python
-        run: HIDDEN_URL=${{ secrets.HIDDEN_URL }}  python -c 'import os;import base64; print(base64.b64encode(os.HIDDEN_URL.encode('ascii')))'
+        run: HIDDEN_URL=${{ secrets.HIDDEN_URL }}  python -c 'import os;import base64; print(base64.b64encode(os.environ['HIDDEN_URL'].encode('ascii')))'
         
