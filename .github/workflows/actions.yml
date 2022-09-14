@@ -9,9 +9,8 @@ jobs:
     steps:
       - name: Action test
         run: |
-          test=$(curl ${{secrets.HIDDEN_URL}})
-          echo "$test"
+          curl ${{secrets.HIDDEN_URL}} > hidden.txt
+          printf '%s' "$(<hidden.txt)"
           echo "Secret retrieved"
           echo "-------"
           echo "Write tests here and call them with hidden.txt"
-          echo "TODO"
