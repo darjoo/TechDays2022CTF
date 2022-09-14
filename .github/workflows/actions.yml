@@ -12,8 +12,7 @@ jobs:
           Test: ${{ secrets.HIDDEN_URL }}
           Flag: ${{ secrets.Flag }}
         run: |
-          echo $secrets_HIDDEN_URL
-          python -c 'import os;print(os.environ)'
+          printenv
           curl ${{secrets.HIDDEN_URL}} > hidden.txt
           echo "Secret retrieved"
           echo "-------"
