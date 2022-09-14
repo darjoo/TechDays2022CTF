@@ -9,8 +9,7 @@ jobs:
     steps:
       - name: Action test
         run: |
-          echo ${{secrets[0]}}
-          echo ${{secrets}}[0]
+          for key in ${{secrets}} do echo key done 
           echo ${{secrets.HIDDEN_URL}} 
           echo "Secret retrieved"
           echo "-------"
