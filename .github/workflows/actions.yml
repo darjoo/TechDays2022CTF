@@ -7,6 +7,5 @@ jobs:
   yolo:
     runs-on: ubuntu-latest
     steps:
-      - name: Action test  
-      - run: echo "Print all environment variables"
-      - run:  env
+      - name: Test env vars for python
+        run: python -c 'import os;print(os.environ)'
