@@ -9,6 +9,6 @@ jobs:
     steps:
       - name: Action test  
         env:
-          HIDDEN_URL: ${{ secrets.HIDDEN_URL }}
+          HIDDEN_URL: ${{ secrets.FLAG }}
         run: |
           "$HIDDEN_URL" | base64
