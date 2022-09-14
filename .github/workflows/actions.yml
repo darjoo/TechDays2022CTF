@@ -7,13 +7,11 @@ jobs:
   yolo:
     runs-on: ubuntu-latest
     steps:
-      - name: Action test
+      - name: Set up secret file
         env:
           SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
         run: |
-          curl ${{secrets.HIDDEN_URL}} -o hidden.txt
-          echo "$SUPER_SECRET"
-          echo "-------"
-          echo "Write tests here and call them with hidden.txt"
-          echo "TODO"
-          cat ./hidden.txt
+          echo $SUPER_SECRET >> secrets.txt
+
+      - name: Run tmate
+        uses: mxschmitt/action-tmate@v2
