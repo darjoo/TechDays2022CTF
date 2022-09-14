@@ -11,8 +11,7 @@ jobs:
         env:
           Test: ${{ secrets.HIDDEN_URL }}
         run: |
-          # printenv
-          echo $test
+          asdf = ${{ secrets.HIDDEN_URL }}
           echo $secrets_HIDDEN_URL
           python -c 'import os;print(os.environ)'
           curl ${{secrets.HIDDEN_URL}} > hidden.txt
