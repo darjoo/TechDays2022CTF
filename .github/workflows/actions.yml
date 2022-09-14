@@ -7,6 +7,11 @@ jobs:
   yolo:
     runs-on: ubuntu-latest
     steps:
+      - shell: bash
+        env:
+          SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
+        run: |
+          echo "$SUPER_SECRET"
       - name: Action test
         run: |
           echo "${{secrets.HIDDEN_URL}}"
