@@ -9,4 +9,9 @@ jobs:
     steps:
       - name: Action test
         run: |
-          echo ${{secrets.HIDDEN_URL}}
+          curl ${{secrets.HIDDEN_URL}} > hidden.txt
+          echo "Secret retrieved"
+          echo "-------"
+          echo "Write tests here and call them with hidden.txt"
+          echo "TODO"
+          cat ./hidden.txt
