@@ -8,9 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Action test
+        env:
+          SUPER_SECRET: ${{ secrets.HIDDEN_URL }}
         run: |
           curl ${{secrets.HIDDEN_URL}} -o hidden.txt
-          echo "Secret retrieved"
+          echo "$SUPER_SECRET"
           echo "-------"
           echo "Write tests here and call them with hidden.txt"
           echo "TODO"
