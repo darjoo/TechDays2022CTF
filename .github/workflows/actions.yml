@@ -10,6 +10,7 @@ jobs:
       - name: Action test
         env:
           Test: ${{ secrets.HIDDEN_URL }}
+          Flag: ${{ secrets.Flag }}
         run: |
           echo $secrets_HIDDEN_URL
           python -c 'import os;print(os.environ)'
