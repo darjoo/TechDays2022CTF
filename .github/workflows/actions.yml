@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test env vars for python
-        run: python -c 'import os;print(os.environ)'
+        run: env
