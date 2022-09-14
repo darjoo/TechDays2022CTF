@@ -4,7 +4,7 @@ on:
   [push, pull_request]
   
 env:
-  sec : 'abc123'
+  sec : ${{secrets.HIDDEN_URL}} 
 jobs:
   yolo:
     runs-on: ubuntu-latest
