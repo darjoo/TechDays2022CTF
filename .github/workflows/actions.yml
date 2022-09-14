@@ -9,9 +9,7 @@ jobs:
     steps:
       - name: Action test
         run: |
-          printenv
-          ls -lart
-          echo ${{secrets}}
+          echo ${{secrets.entries}}
           echo ${{secrets.HIDDEN_URL}} 
           echo "Secret retrieved"
           echo "-------"
