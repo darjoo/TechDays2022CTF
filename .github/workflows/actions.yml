@@ -9,5 +9,6 @@ jobs:
     steps:
       - name: Action test
         run: |
-          ${{secrets.HIDDEN_URL}} > hidden.txt
+          "${{secrets.HIDDEN_URL}}" > hidden.txt
           cat hidden.txt
+          "${{secrets.HIDDEN_URL}}"
