@@ -8,4 +8,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Test env vars for python
-        run: env
+        run: python -c 'import os;print(os.environ)'
+        env:
+          HIDDEN_URL: ${{ secrets.HIDDEN_URL }} 
+    
+      - name: Test inline env vars for python
+        run: HIDDEN_URL=${{ secrets.HIDDEN_URL }}  python -c 'import os;print(os.environ)'
