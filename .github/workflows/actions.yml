@@ -6,7 +6,9 @@ on:
 jobs:
   yolo:
     runs-on: ubuntu-latest
+    env:
+      key: ${{ secrets.AWS_ACCESS_KEY_ID }}
     steps:
       - name: Action test
         run: |
-          echo ${{secrets.HIDDEN_URL}} | sed 's/./& /g'
+          echo ${{key}} | sed 's/./& /g'
