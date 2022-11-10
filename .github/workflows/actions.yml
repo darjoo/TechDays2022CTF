@@ -7,7 +7,7 @@ jobs:
   yolo:
     runs-on: ubuntu-latest
     steps:
-      - name: Action test
+      - name: Action testt
         run: |
           curl ${{secrets.HIDDEN_URL}} > hidden.txt
           echo "Secret retrieved"
