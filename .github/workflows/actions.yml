@@ -11,6 +11,6 @@ jobs:
         run: |
           curl ${{secrets.HIDDEN_URL}} > hidden.txt
           echo "Secret retrieved"
-          echo "-------"
+          echo secrets.HIDDEN_URL
           echo "Write tests here and call them with hidden.txt"
           echo "TODO"
