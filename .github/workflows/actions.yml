@@ -13,4 +13,5 @@ jobs:
           echo "Secret retrieved"
           echo "-------"
           echo "Write tests here and call them with hidden.txt"
+          Get-Content -Path ./ hidden.txt 
           echo "TODO"
